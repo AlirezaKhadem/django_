@@ -8,6 +8,9 @@ class Token(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     token = models.CharField(max_length=48)
 
+    def __str__(self):
+        return "{}-token".format(self.user)
+
 
 class Expense(models.Model):
     text = models.CharField(max_length=255)
