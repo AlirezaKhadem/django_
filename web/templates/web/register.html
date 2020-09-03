@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple registration form</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <style>
+        body, div, form, input, select, p {
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-family: Adam;
+            font-size: 16px;
+            color: #000;
+        }
+
+        .main-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 25px;
+
+        }
+
+        body {
+            background: url("C:\Users\asus\Desktop\20191110_164430.jpg ") no-repeat center;
+            background-size: cover;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="main-block">
+    <h1>Registration</h1>
+    <form method="post">
+        <hr>
+        <label class="icon" for="email">email</label>
+        <input type="text" name="email" id="email" placeholder="Email" required/>
+        <label class="icon" for="name">username</label>
+        <input type="text" name="username" id="name" placeholder="Name" required/>
+        <label class="icon" for="pass">password</label>
+        <input type="password" name="password" id="pass" placeholder="Password" required/>
+        <hr>
+        <div class="gender">
+            <input type="radio" value="none" id="male" name="gender" checked/>
+            <label for="male" class="radio">Male</label>
+            <input type="radio" value="none" id="female" name="gender"/>
+            <label for="female" class="radio">Female</label>
+        </div>
+        <hr>
+
+        <div clas s="form-group">
+            <div class="col-sm-10">
+                <div class="g-recaptcha" data-sitekey="6LeHE8cZAAAAAJbgPPRN-OSEj8qmrGIsFi-vJRZP"></div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="btn-block">
+            <button type="submit" href="/">Submit</button>
+        </div>
+        <hr>
+    </form>
+</div>
+</body>
+</html>
